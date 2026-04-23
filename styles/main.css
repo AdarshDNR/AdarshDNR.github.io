@@ -469,8 +469,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    gap: var(--space-2);
-    padding: 80px var(--space-5) var(--space-6);
+    gap: var(--space-1);
+    padding: 70px var(--space-5) var(--space-5);
     background: rgba(35, 47, 62, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -498,9 +498,9 @@ body {
   .nav__link {
     display: flex;
     width: 100%;
-    font-size: var(--font-size-xl);
-    padding: var(--space-4) var(--space-4);
-    min-height: 56px;
+    font-size: var(--font-size-lg);
+    padding: var(--space-3) var(--space-4);
+    min-height: 48px;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
@@ -542,7 +542,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-3);
   max-width: 800px;
 }
 
@@ -645,12 +645,91 @@ body {
 }
 
 @media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding: 80px var(--space-4) var(--space-6);
+  }
+
+  .hero__content {
+    gap: var(--space-2);
+  }
+
+  .hero__avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--space-1);
+  }
+
+  .hero__greeting {
+    font-size: var(--font-size-xs);
+    margin-bottom: 0;
+    letter-spacing: 0.08em;
+  }
+
+  .hero__name {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 0;
+  }
+
+  .hero__role-wrapper {
+    gap: var(--space-2);
+  }
+
   .hero__title {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
+    margin-bottom: 0;
   }
 
   .hero__tagline {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    margin-top: var(--space-1);
+  }
+
+  .hero__role-tags {
+    gap: 6px;
+    margin-top: var(--space-1);
+  }
+
+  .hero__tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .hero__cta {
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero__cta .btn {
+    font-size: var(--font-size-sm);
+    padding: var(--space-2) var(--space-4);
+    min-height: 40px;
+    width: 100%;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+
+  /* Hide most of the decorative floating graphics on mobile */
+  .hero__graphic {
+    display: none;
+  }
+
+  .hero__graphic--chart,
+  .hero__graphic--trend,
+  .hero__graphic--bulb {
+    display: block;
+    opacity: 0.35;
+  }
+
+  .hero__graphic svg {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -2563,7 +2642,7 @@ button:focus-visible,
 .hero__avatar {
   width: 140px;
   height: 140px;
-  margin-bottom: var(--space-4);
+  margin-bottom: 0;
   border-radius: 50%;
   overflow: visible;
   position: relative;
@@ -2584,8 +2663,9 @@ button:focus-visible,
 
 @media (max-width: 767px) {
   .hero__avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -2659,26 +2739,73 @@ button:focus-visible,
     background-color: #232F3E !important;
   }
 
-  /* Ensure inner container stays a proper flex row */
   .nav__inner {
     display: flex !important;
     align-items: center;
     justify-content: space-between;
+    height: 56px;
   }
 
-  /* Logo always visible */
   .nav__logo {
     display: inline-block;
+    font-size: var(--font-size-lg);
   }
 
-  /* Hamburger cluster on the right */
   .nav__hamburger {
     display: inline-flex !important;
     flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav__hamburger-line {
+    width: 20px;
   }
 }
 
 /* Ensure the body has a solid background behind the fixed nav */
 body {
   background-color: var(--color-bg-primary);
+}
+
+/* ============================================
+   Hero Decorative Floating Graphics (Desktop)
+   ============================================ */
+
+.hero__graphics {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__graphic {
+  position: absolute;
+  opacity: 0.5;
+  animation: hero-graphic-drift 10s ease-in-out infinite;
+}
+
+.hero__graphic--chart     { top: 15%;  left: 8%;   animation-delay: 0s; }
+.hero__graphic--pie       { top: 22%;  right: 10%; animation-delay: -1.5s; }
+.hero__graphic--trend     { bottom: 25%; left: 12%; animation-delay: -3s; }
+.hero__graphic--db        { top: 60%;  right: 14%; animation-delay: -4.5s; }
+.hero__graphic--target    { top: 68%;  left: 18%;  animation-delay: -6s; }
+.hero__graphic--dashboard { top: 12%;  right: 22%; animation-delay: -7.5s; }
+
+/* Additional BA-themed floating icons */
+.hero__graphic--funnel    { top: 45%;  left: 4%;   animation-delay: -0.8s; }
+.hero__graphic--gauge     { top: 42%;  right: 4%;  animation-delay: -2.3s; }
+.hero__graphic--filter    { bottom: 12%; right: 20%; animation-delay: -3.8s; }
+.hero__graphic--search    { top: 35%;  left: 26%;  animation-delay: -5.3s; }
+.hero__graphic--bulb      { bottom: 8%; left: 28%; animation-delay: -6.8s; }
+.hero__graphic--grid      { top: 8%;   left: 30%;  animation-delay: -8.3s; }
+
+@keyframes hero-graphic-drift {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50%      { transform: translateY(-12px) rotate(3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__graphic { animation: none; }
 }
