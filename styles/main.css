@@ -1137,9 +1137,9 @@ body {
 
 .metrics-dashboard__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-5);
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
