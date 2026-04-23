@@ -10,6 +10,7 @@ const NavigationController = {
   hamburger: null,
   navLinksContainer: null,
   sections: [],
+  scrollTicking: false,
 
   init() {
     this.nav = document.getElementById('navbar');
@@ -31,28 +32,49 @@ const NavigationController = {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
-        this.smoothScrollTo(targetId);
+        // Close menu BEFORE scrolling so body scroll-lock is released
         this.closeMobileMenu();
+        // Small delay so the menu close animation starts first on mobile
+        requestAnimationFrame(() => {
+          this.smoothScrollTo(targetId);
+        });
       });
     });
 
     // Hamburger toggle
     if (this.hamburger) {
-      this.hamburger.addEventListener('click', () => {
+      this.hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
         this.toggleMobileMenu();
       });
     }
 
-    // Scroll handler for active link + nav background
+    // Throttled scroll handler
     window.addEventListener('scroll', () => {
-      this.handleScroll();
+      if (!this.scrollTicking) {
+        window.requestAnimationFrame(() => {
+          this.handleScroll();
+          this.scrollTicking = false;
+        });
+        this.scrollTicking = true;
+      }
     }, { passive: true });
 
-    // Close mobile menu on Escape key
+    // Close on Escape
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        this.closeMobileMenu();
-      }
+      if (e.key === 'Escape') this.closeMobileMenu();
+    });
+
+    // Close on resize if we go back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) this.closeMobileMenu();
+    });
+
+    // Close menu when clicking outside of it on mobile
+    document.addEventListener('click', (e) => {
+      if (!this.isMobileMenuOpen()) return;
+      const clickedInsideNav = this.nav && this.nav.contains(e.target);
+      if (!clickedInsideNav) this.closeMobileMenu();
     });
   },
 
@@ -78,21 +100,30 @@ const NavigationController = {
     });
   },
 
-  toggleMobileMenu() {
-    const isOpen = this.hamburger.getAttribute('aria-expanded') === 'true';
-    this.hamburger.setAttribute('aria-expanded', String(!isOpen));
-    this.navLinksContainer.classList.toggle('nav__links--open', !isOpen);
+  isMobileMenuOpen() {
+    return this.hamburger && this.hamburger.getAttribute('aria-expanded') === 'true';
+  },
 
-    // Prevent body scroll when menu is open
-    document.body.style.overflow = !isOpen ? 'hidden' : '';
+  toggleMobileMenu() {
+    if (this.isMobileMenuOpen()) {
+      this.closeMobileMenu();
+    } else {
+      this.openMobileMenu();
+    }
+  },
+
+  openMobileMenu() {
+    if (!this.hamburger) return;
+    this.hamburger.setAttribute('aria-expanded', 'true');
+    this.navLinksContainer.classList.add('nav__links--open');
+    document.body.classList.add('body--menu-open');
   },
 
   closeMobileMenu() {
-    if (this.hamburger) {
-      this.hamburger.setAttribute('aria-expanded', 'false');
-      this.navLinksContainer.classList.remove('nav__links--open');
-      document.body.style.overflow = '';
-    }
+    if (!this.hamburger) return;
+    this.hamburger.setAttribute('aria-expanded', 'false');
+    this.navLinksContainer.classList.remove('nav__links--open');
+    document.body.classList.remove('body--menu-open');
   },
 
   handleScroll() {
