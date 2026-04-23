@@ -459,15 +459,18 @@ body {
 @media (max-width: 767px) {
   .nav__links {
     position: fixed;
-    top: 64px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* Use dynamic viewport height where supported */
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
-    gap: 0;
-    padding: var(--space-5) var(--space-4);
+    gap: var(--space-2);
+    padding: 80px var(--space-5) var(--space-6);
     background: rgba(35, 47, 62, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -476,7 +479,7 @@ body {
     pointer-events: none;
     transform: translateY(-8px);
     transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
-    z-index: calc(var(--z-fixed) - 1);
+    z-index: calc(var(--z-fixed) + 5);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -495,23 +498,25 @@ body {
   .nav__link {
     display: flex;
     width: 100%;
-    font-size: var(--font-size-lg);
-    padding: var(--space-3) var(--space-4);
-    min-height: 48px;
+    font-size: var(--font-size-xl);
+    padding: var(--space-4) var(--space-4);
+    min-height: 56px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     border-radius: var(--radius-md);
+    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
   }
 
   .nav__link:hover,
   .nav__link--active {
-    background: rgba(255, 153, 0, 0.12);
+    background: rgba(255, 153, 0, 0.15);
     color: var(--color-orange);
   }
 
   .nav__hamburger {
     display: flex;
-    z-index: 2;
+    z-index: calc(var(--z-fixed) + 10);
   }
 }
 
@@ -2606,11 +2611,10 @@ button:focus-visible,
     background: var(--color-white);
   }
 
-  /* Ensure hamburger and theme toggle sit on top of the overlay */
-  .nav__hamburger,
-  .nav__theme-toggle {
+  /* Ensure hamburger sits on top of the overlay */
+  .nav__hamburger {
     position: relative;
-    z-index: calc(var(--z-fixed) + 1);
+    z-index: calc(var(--z-fixed) + 10);
   }
 
   /* Animate links inside the menu with a small stagger */
@@ -2634,19 +2638,47 @@ button:focus-visible,
   }
 }
 
-/* Dark-mode tweaks for mobile nav overlay */
-:root[data-theme="dark"] .nav__links {
-  background: rgba(2, 6, 23, 0.98);
-}
-
-@media (max-width: 767px) {
-  :root[data-theme="dark"] .nav {
-    background: rgba(2, 6, 23, 0.95);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .nav__links--open li {
     animation: none !important;
   }
+}
+
+/* ============================================
+   Nav Bar Safety Overrides — Guarantee Visibility
+   ============================================ */
+
+/* Ensure nav always renders above everything */
+.nav {
+  z-index: 9999 !important;
+}
+
+/* Fallback: even without backdrop-filter support, mobile nav has a solid bg */
+@media (max-width: 767px) {
+  .nav {
+    background-color: #232F3E !important;
+  }
+
+  /* Ensure inner container stays a proper flex row */
+  .nav__inner {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo always visible */
+  .nav__logo {
+    display: inline-block;
+  }
+
+  /* Hamburger cluster on the right */
+  .nav__hamburger {
+    display: inline-flex !important;
+    flex-shrink: 0;
+  }
+}
+
+/* Ensure the body has a solid background behind the fixed nav */
+body {
+  background-color: var(--color-bg-primary);
 }
