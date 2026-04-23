@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adarsh Kumar | Amazon Portfolio</title>
+  <meta name="description" content="Portfolio of Adarsh Kumar showcasing Amazon projects, automation solutions, and operational excellence across three teams.">
+  <meta property="og:title" content="Adarsh Kumar | Amazon Portfolio">
+  <meta property="og:description" content="Explore Adarsh Kumar's career journey at Amazon — automation projects, operational excellence, and measurable impact across three teams.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Task 3.1: Navigation Bar -->
+  <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner container">
+      <a href="#hero" class="nav__logo" aria-label="Adarsh Kumar - Home">AK</a>
+      <ul class="nav__links" id="nav-links" role="menubar">
+        <li role="none"><a href="#hero" class="nav__link nav__link--active" role="menuitem">Home</a></li>
+        <li role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+        <li role="none"><a href="#timeline" class="nav__link" role="menuitem">Career</a></li>
+        <li role="none"><a href="#team-1" class="nav__link" role="menuitem">Investigation</a></li>
+        <li role="none"><a href="#team-2" class="nav__link" role="menuitem">Compliance</a></li>
+        <li role="none"><a href="#team-3" class="nav__link" role="menuitem">Catalog</a></li>
+        <li role="none"><a href="#team-4" class="nav__link" role="menuitem">Analytics</a></li>
+        <li role="none"><a href="#metrics" class="nav__link" role="menuitem">Metrics</a></li>
+        <li role="none"><a href="#skills" class="nav__link" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#contact" class="nav__link" role="menuitem">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <!-- Floating BA Graphics -->
+      <div class="hero__graphics" aria-hidden="true">
+        <div class="hero__graphic hero__graphic--chart animate-float-1">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,153,0,0.3)" stroke-width="1.5">
+            <rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="8" width="4" height="13" rx="1"/><rect x="17" y="4" width="4" height="17" rx="1"/>
+          </svg>
+        </div>
+        <div class="hero__graphic hero__graphic--pie animate-float-2">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="rgba(20,110,180,0.3)" stroke-width="1.5">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>
+          </svg>
+        </div>
+        <div class="hero__graphic hero__graphic--trend animate-float-3">
+          <svg width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="rgba(255,153,0,0.25)" stroke-width="1.5">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <div class="hero__graphic hero__graphic--db animate-float-4">
+          <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="rgba(0,168,225,0.3)" stroke-width="1.5">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        </div>
+        <div class="hero__graphic hero__graphic--target animate-float-5">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,153,0,0.2)" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <div class="hero__graphic hero__graphic--dashboard animate-float-6">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="rgba(20,110,180,0.25)" stroke-width="1.5">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="4" rx="1"/><rect x="14" y="10" width="7" height="7" rx="1"/><rect x="3" y="13" width="7" height="4" rx="1"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero__content container">
+        <p class="hero__greeting animate-fade-in">Hello, I'm</p>
+        <h1 class="hero__name animate-slide-up">Adarsh Kumar</h1>
+        <div class="hero__role-wrapper animate-slide-up-delay">
+          <p class="hero__title">Business Analyst at Amazon</p>
+          <div class="hero__role-tags">
+            <span class="hero__tag">📊 Data Analytics</span>
+            <span class="hero__tag">📈 Dashboards</span>
+            <span class="hero__tag">🗃️ SQL</span>
+            <span class="hero__tag">⚙️ Automation</span>
+          </div>
+        </div>
+        <p class="hero__tagline animate-slide-up-delay-2">Transforming data into decisions — optimizing SQL queries, building dashboards, automating operations, and driving measurable business impact across teams.</p>
+        <div class="hero__cta">
+          <a href="#team-4" class="btn btn--primary">Current Role</a>
+          <a href="#team-1" class="btn btn--secondary">View Projects</a>
+          <a href="#contact" class="btn btn--outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About / Summary Section -->
+    <section id="about" class="about">
+      <div class="about__bg-pattern" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <div class="about__wrapper">
+          <div class="about__visual animate-on-scroll">
+            <div class="about__orbit">
+              <div class="about__orbit-center">AK</div>
+              <span class="about__orbit-icon about__orbit-icon--1" aria-hidden="true">📊</span>
+              <span class="about__orbit-icon about__orbit-icon--2" aria-hidden="true">🗃️</span>
+              <span class="about__orbit-icon about__orbit-icon--3" aria-hidden="true">⚙️</span>
+              <span class="about__orbit-icon about__orbit-icon--4" aria-hidden="true">🔍</span>
+              <span class="about__orbit-icon about__orbit-icon--5" aria-hidden="true">📈</span>
+              <span class="about__orbit-icon about__orbit-icon--6" aria-hidden="true">🐍</span>
+            </div>
+          </div>
+          <div class="about__text animate-on-scroll">
+            <p class="about__summary">A results-driven <strong>Business Analyst</strong> with a proven track record across four Amazon teams — from investigating buyer abuse patterns and automating compliance workflows to leading catalog operations at scale and currently optimizing <strong>Subscribe &amp; Save India</strong> through SQL-driven analytics and dashboards.</p>
+            <p class="about__summary">Passionate about turning data into actionable insights and building automation solutions that deliver measurable business impact — reducing manual effort, improving accuracy, and scaling operations.</p>
+          </div>
+        </div>
+        <div class="about__stats">
+          <div class="about__stat-card animate-on-scroll">
+            <div class="about__stat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="about__stat-value" data-target="4">0</span>
+            <span class="about__stat-label">Amazon Teams</span>
+          </div>
+          <div class="about__stat-card animate-on-scroll">
+            <div class="about__stat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <span class="about__stat-value" data-target="15" data-suffix="+">0</span>
+            <span class="about__stat-label">Projects Delivered</span>
+          </div>
+          <div class="about__stat-card animate-on-scroll">
+            <div class="about__stat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <span class="about__stat-value" data-target="90" data-suffix="%">0</span>
+            <span class="about__stat-label">Effort Reduction</span>
+          </div>
+          <div class="about__stat-card animate-on-scroll">
+            <div class="about__stat-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <span class="about__stat-value" data-target="35" data-prefix="GBP " data-suffix="K">0</span>
+            <span class="about__stat-label">Weekly Savings</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Timeline Section -->
+    <section id="timeline" class="timeline">
+      <div class="timeline__bg-pattern" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section__title">Career Journey</h2>
+        <p class="section__subtitle">Four roles. Four teams. A progression from investigation to analytics &mdash; driving measurable impact at every step.</p>
+        <div class="timeline__container">
+          <div class="timeline__entry timeline__entry--right animate-on-scroll" data-team="team-1">
+            <div class="timeline__node" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <span class="timeline__period">Dec 2022 &mdash; June 2024</span>
+                <span class="timeline__duration">1y 7m</span>
+              </div>
+              <h3 class="timeline__role">Investigation Specialist</h3>
+              <p class="timeline__team">Buyer Abuse Automation Exception</p>
+              <p class="timeline__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="timeline__loc-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Hyderabad, India</p>
+              <p class="timeline__summary">Led tracking improvements and DX Freight overhaul, saving <strong>GBP 35K weekly</strong> and boosting delivery accuracy by 30%.</p>
+              <div class="timeline__highlights">
+                <div class="timeline__highlight"><span class="timeline__highlight-value">GBP 35K</span><span class="timeline__highlight-label">Weekly savings</span></div>
+                <div class="timeline__highlight"><span class="timeline__highlight-value">30%</span><span class="timeline__highlight-label">Accuracy boost</span></div>
+              </div>
+              <div class="timeline__tags">
+                <span class="timeline__tag">Investigation</span>
+                <span class="timeline__tag">Risk Mitigation</span>
+                <span class="timeline__tag">DX Freight</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__entry timeline__entry--left animate-on-scroll" data-team="team-2">
+            <div class="timeline__node" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <span class="timeline__period">July 2024 &mdash; May 2025</span>
+                <span class="timeline__duration">11 months</span>
+              </div>
+              <h3 class="timeline__role">FBA Compliance Specialist</h3>
+              <p class="timeline__team">FBA Compliance</p>
+              <p class="timeline__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="timeline__loc-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</p>
+              <p class="timeline__summary">Automated <strong>6 critical compliance processes</strong> using Python, Selenium, VBA, and Excel Macros &mdash; cutting processing times by up to 98%.</p>
+              <div class="timeline__highlights">
+                <div class="timeline__highlight"><span class="timeline__highlight-value">98%</span><span class="timeline__highlight-label">Time reduction</span></div>
+                <div class="timeline__highlight"><span class="timeline__highlight-value">30K+</span><span class="timeline__highlight-label">ARN verifications</span></div>
+              </div>
+              <div class="timeline__tags">
+                <span class="timeline__tag">Python</span>
+                <span class="timeline__tag">Selenium</span>
+                <span class="timeline__tag">VBA</span>
+                <span class="timeline__tag">GST</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__entry timeline__entry--right animate-on-scroll" data-team="team-3">
+            <div class="timeline__node" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <span class="timeline__period">June 2025 &mdash; March 2026</span>
+                <span class="timeline__duration">10 months</span>
+              </div>
+              <h3 class="timeline__role">Catalog Lead</h3>
+              <p class="timeline__team">IN Fresh Amazon</p>
+              <p class="timeline__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="timeline__loc-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</p>
+              <p class="timeline__summary">Owned end-to-end automation of bulk uploads, perishables reporting, and template generation for <strong>50K+ SKUs</strong> &mdash; reducing effort by 80-90%.</p>
+              <div class="timeline__highlights">
+                <div class="timeline__highlight"><span class="timeline__highlight-value">50K+</span><span class="timeline__highlight-label">SKUs managed</span></div>
+                <div class="timeline__highlight"><span class="timeline__highlight-value">90%</span><span class="timeline__highlight-label">Effort reduction</span></div>
+              </div>
+              <div class="timeline__tags">
+                <span class="timeline__tag">Catalog</span>
+                <span class="timeline__tag">F&amp;V</span>
+                <span class="timeline__tag">FRPG</span>
+                <span class="timeline__tag">Ownership</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline__entry timeline__entry--left animate-on-scroll" data-team="team-4">
+            <div class="timeline__node timeline__node--current" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <div class="timeline__card">
+              <div class="timeline__card-header">
+                <span class="timeline__period timeline__period--current">April 2026 &mdash; Present</span>
+                <span class="timeline__duration">Current</span>
+              </div>
+              <h3 class="timeline__role">Business Analyst</h3>
+              <p class="timeline__team">Subscribe &amp; Save India</p>
+              <p class="timeline__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="timeline__loc-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</p>
+              <p class="timeline__summary">Optimizing <strong>SQL queries</strong>, building dashboards, and driving data-driven decisions for the Subscribe &amp; Save India program.</p>
+              <div class="timeline__highlights">
+                <div class="timeline__highlight"><span class="timeline__highlight-value">SQL</span><span class="timeline__highlight-label">Query optimization</span></div>
+                <div class="timeline__highlight"><span class="timeline__highlight-value">BI</span><span class="timeline__highlight-label">Dashboards</span></div>
+              </div>
+              <div class="timeline__tags">
+                <span class="timeline__tag">SQL</span>
+                <span class="timeline__tag">Dashboards</span>
+                <span class="timeline__tag">Analytics</span>
+                <span class="timeline__tag">Business Analysis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 7.1: Team 1 — Investigation Specialist -->
+    <section id="team-1" class="team team--1">
+      <div class="container">
+        <div class="team__header">
+          <h2 class="section__title">Buyer Abuse Automation Exception</h2>
+          <p class="team__role">Investigation Specialist</p>
+          <p class="team__location">Hyderabad, India</p>
+        </div>
+        <div class="achievement-grid">
+          <article class="achievement-card animate-on-scroll">
+            <div class="achievement-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Reduced Financial Losses</h3>
+            <div class="achievement-card__metric">
+              <span class="achievement-card__value" data-target="35000" data-prefix="GBP ">0</span>
+              <span class="achievement-card__label">Weekly savings</span>
+            </div>
+            <p class="achievement-card__description">Implemented tracking improvements that decreased erroneous claims, saving Amazon GBP 35,000 weekly, enhancing financial accuracy.</p>
+          </article>
+          <article class="achievement-card animate-on-scroll">
+            <div class="achievement-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Increased Delivery Accuracy</h3>
+            <div class="achievement-card__metric">
+              <span class="achievement-card__value" data-target="30" data-suffix="%">0</span>
+              <span class="achievement-card__label">Accuracy improvement</span>
+            </div>
+            <p class="achievement-card__description">Led the overhaul of the DX Freight tracking system, boosting delivery milestone accuracy by 30%.</p>
+          </article>
+          <article class="achievement-card animate-on-scroll">
+            <div class="achievement-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Strengthened Seller Confidence</h3>
+            <div class="achievement-card__metric">
+              <span class="achievement-card__label">Fair marketplace practices</span>
+            </div>
+            <p class="achievement-card__description">Identified and resolved penalty inefficiencies, reducing unjust charges and fostering fair marketplace practices.</p>
+          </article>
+          <article class="achievement-card animate-on-scroll">
+            <div class="achievement-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Enhanced Operational Efficiency</h3>
+            <div class="achievement-card__metric">
+              <span class="achievement-card__value" data-target="25" data-suffix="%">0</span>
+              <span class="achievement-card__label">Faster escalation resolution</span>
+            </div>
+            <p class="achievement-card__description">Collaborated with cross-functional teams to streamline issue resolution, reducing escalation time by 25%.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 8.1: Team 2 — FBA Compliance Specialist -->
+    <section id="team-2" class="team team--2">
+      <div class="container">
+        <div class="team__header">
+          <h2 class="section__title">FBA Compliance</h2>
+          <p class="team__role">FBA Compliance Specialist</p>
+          <p class="team__location">Bengaluru, India</p>
+        </div>
+        <div class="project-grid">
+          <!-- Project 1: GST ARN Status Automation -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">GST ARN Status Automation</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="30000" data-suffix="+">0</span>
+                <span class="project-card__metric-label">ARN verifications</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="85" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Time reduction</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Automated GST ARN status verification, reducing manual effort and improving efficiency</li>
+              <li>Cut processing time from 5-8 hours to 1 hour by automating 30K+ ARN verifications</li>
+              <li>Developed Selenium scripts to automate verification, boosting data validation accuracy</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Selenium</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Web Automation</span>
+            </div>
+          </article>
+
+          <!-- Project 2: Collation of RCA Report -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Collation of RCA Report</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="98" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Time savings</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="3" data-suffix=" min">0</span>
+                <span class="project-card__metric-label">Processing time</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Led automation of RCA report collation, reducing manual effort</li>
+              <li>Cut processing time from 2-4 hours weekly to just 3 minutes</li>
+              <li>Developed Excel macros &amp; VBA scripts to automate report generation</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Excel Macros</span>
+              <span class="tech-tag">VBA</span>
+            </div>
+          </article>
+
+          <!-- Project 3: NOC & BSA Report Automation -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">NOC &amp; BSA Report Automation</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="80" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Time savings</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="85" data-suffix="%">0</span>
+                <span class="project-card__metric-label">TAT reduction</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Automated NOC &amp; BSA report generation, reducing TAT from 7 days to 1 day</li>
+              <li>Achieved 80% time savings in reporting efficiency</li>
+              <li>Developed Python scripts to streamline data extraction and report generation</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Extraction</span>
+            </div>
+          </article>
+
+          <!-- Project 4: IOGL Disable Script Optimization -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">IOGL Disable Script Optimization</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="4" data-suffix="x">0</span>
+                <span class="project-card__metric-label">Capacity increase</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="33" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Efficiency gain</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Optimized IOGL disable script using Python, increasing capacity from 25 to 100 FCs/hour</li>
+              <li>Tested, validated, and deployed for 46 seller-FC combinations in under 30 minutes</li>
+              <li>Reduced manual effort through automation, freeing up resources</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Script Optimization</span>
+            </div>
+          </article>
+
+          <!-- Project 5: FC Address Validation Automation -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">FC Address Validation Automation</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="98" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Validation accuracy</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Automated GSTIN validation for APoB addresses achieving 98% accuracy</li>
+              <li>Eliminated manual cross-referencing, improving efficiency &amp; data reliability</li>
+              <li>Streamlined validation for DRCC, KA FC, and GJ FC</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Excel Macros</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </article>
+
+          <!-- Project 6: VBA Code Scripting in SSR Report -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">VBA Code Scripting in SSR Report</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="99" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Data accuracy</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="30">0</span>
+                <span class="project-card__metric-label">Columns processed</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Developed VBA scripts for SSR reports, eliminating duplicates across 30 columns</li>
+              <li>Achieved 99% data accuracy through automated data cleansing</li>
+              <li>Strengthened data integrity with validation checks</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">VBA</span>
+              <span class="tech-tag">Excel</span>
+              <span class="tech-tag">Data Validation</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team 3: Catalog Lead - IN Fresh Amazon -->
+    <section id="team-3" class="team team--3">
+      <div class="container">
+        <div class="team__header">
+          <h2 class="section__title">IN Fresh Amazon</h2>
+          <p class="team__role">Catalog Lead</p>
+          <p class="team__location">Bengaluru, India</p>
+        </div>
+        <div class="project-grid">
+          <!-- Project 1: Bulk Upload Automation -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Bulk Upload Automation (Feed Type 256)</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="90" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Effort reduction</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="100" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Data accuracy</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Automated complete submission workflow — account-to-template mapping, validation, store-wise template generation, portal navigation &amp; reporting</li>
+              <li>Reduced large bulk operations from 8-10 hours to ~1-1.5 hours</li>
+              <li>Achieved 100% data accuracy with consistent application of business logic</li>
+              <li>Replaced manual store-by-store uploads under Feed Type 256 after Feed Type 113 deprecation</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Automation</span>
+              <span class="tech-tag">Template Generation</span>
+              <span class="tech-tag">Portal Navigation</span>
+            </div>
+          </article>
+
+          <!-- Project 2: High-Frequency Perishables Reporting -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">High-Frequency Perishables Reporting (FRPG)</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="6" data-suffix="x daily">0</span>
+                <span class="project-card__metric-label">Report frequency</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="10">0</span>
+                <span class="project-card__metric-label">Categories covered</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="95" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Time savings</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Built fully automated pipeline generating Genuine SWOOS reports 6x daily</li>
+              <li>Covers 10 perishables categories: Bread, Butter, Cake, Cheese, Curd, Eggs, Frozen, Milk, Paneer, UHT Milk</li>
+              <li>Accurately applies T14 and ROI business logic</li>
+              <li>Reduced weekly effort from ~8 hours to under 20 minutes</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Pipeline</span>
+              <span class="tech-tag">Business Logic</span>
+              <span class="tech-tag">Automated Reporting</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Store-wise & SKU-level Template Generation -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Store-wise &amp; SKU-level Template Generation</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="50000" data-suffix="+">0</span>
+                <span class="project-card__metric-label">SKUs managed</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="80" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Effort reduction</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Dynamically generates store-specific Excel upload templates from centralized input files</li>
+              <li>Supports 50K+ SKUs at scale with preserved structures, validations, dropdowns, formatting &amp; data types</li>
+              <li>Eliminates repetitive manual data entry and recurring operational bottlenecks</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Excel Automation</span>
+              <span class="tech-tag">Data Processing</span>
+            </div>
+          </article>
+
+          <!-- Project 4: F&V Catalog Management -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">F&amp;V Catalog Management</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="6" data-suffix=" months">0</span>
+                <span class="project-card__metric-label">Scope ownership</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="100" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Catalog accuracy</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Owned end-to-end Fruits &amp; Vegetables catalog work stream within 6 months</li>
+              <li>Resolved category gaps and drove initiatives improving customer availability</li>
+              <li>Enhanced in-stock upload for new store launches and accelerated issue resolution</li>
+              <li>Simplified manual reports and streamlined processes for operational efficiency</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Catalog Management</span>
+              <span class="tech-tag">Process Improvement</span>
+              <span class="tech-tag">Cross-Functional</span>
+            </div>
+          </article>
+
+          <!-- Project 5: F&V Category Gap Resolution -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">F&amp;V Category Gap Resolution</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="100" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Category coverage</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="40" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Availability uplift</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Proactively resolved category gaps in Fruits &amp; Vegetables catalog, improving customer availability</li>
+              <li>Drove initiatives that enhanced in-stock upload for new store launches</li>
+              <li>Accelerated issue resolution across stores through systematic problem-solving</li>
+              <li>Strengthened data validation processes and cross-team alignment</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Catalog Ops</span>
+              <span class="tech-tag">Category Management</span>
+              <span class="tech-tag">Customer Availability</span>
+            </div>
+          </article>
+
+          <!-- Project 6: FNV Charter - New Store Launch In-Stock Upload -->
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">FNV Charter &mdash; New Store Launch In-Stock Upload</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="6" data-suffix=" months">0</span>
+                <span class="project-card__metric-label">Charter ownership</span>
+              </div>
+              <div class="project-card__metric">
+                <span class="project-card__metric-value" data-target="70" data-suffix="%">0</span>
+                <span class="project-card__metric-label">Faster launch readiness</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Managed the FNV catalog work stream end-to-end within a short span of 6 months</li>
+              <li>Simplified multiple manual reports and streamlined processes to reduce operational complexity</li>
+              <li>Transformed manual workflows into efficient, rule-based systems enabling faster store launches</li>
+              <li>Integrated AI tools into daily routine, setting an example for the rest of the team</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Process Improvement</span>
+              <span class="tech-tag">Store Launches</span>
+              <span class="tech-tag">AI Tools</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team 4 — Business Analyst, Subscribe & Save India -->
+    <section id="team-4" class="team team--4">
+      <div class="container">
+        <div class="team__header">
+          <h2 class="section__title">Subscribe &amp; Save India</h2>
+          <p class="team__role">Business Analyst</p>
+          <p class="team__location">Bengaluru, India</p>
+          <span class="team__badge">Current Role</span>
+        </div>
+        <div class="project-grid">
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">SQL Query Optimization</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-label">Performance tuning</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Optimizing complex SQL queries for faster data retrieval and reporting</li>
+              <li>Improving query performance to support real-time business decision-making</li>
+              <li>Reducing data processing bottlenecks across Subscribe &amp; Save workflows</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Query Optimization</span>
+              <span class="tech-tag">Data Analysis</span>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Dashboard Development</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-label">Data visualization</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Building interactive dashboards for stakeholder visibility into key business metrics</li>
+              <li>Creating automated reporting pipelines for Subscribe &amp; Save program performance</li>
+              <li>Enabling data-driven decisions through clear, actionable visualizations</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Dashboards</span>
+              <span class="tech-tag">Data Visualization</span>
+              <span class="tech-tag">Reporting</span>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Business Analysis &amp; Insights</h3>
+            </div>
+            <div class="project-card__metrics">
+              <div class="project-card__metric">
+                <span class="project-card__metric-label">Strategic insights</span>
+              </div>
+            </div>
+            <ul class="project-card__highlights">
+              <li>Analyzing subscription trends, customer behavior, and program performance metrics</li>
+              <li>Collaborating with cross-functional teams to identify growth opportunities</li>
+              <li>Translating complex data into actionable business recommendations</li>
+              <li>Defining and tracking KPIs to measure program success and operational efficiency</li>
+            </ul>
+            <div class="project-card__tech-tags">
+              <span class="tech-tag">Business Analysis</span>
+              <span class="tech-tag">KPI Tracking</span>
+              <span class="tech-tag">Stakeholder Management</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 10.1: Key Metrics Dashboard -->
+    <section id="metrics" class="metrics-dashboard">
+      <div class="container">
+        <h2 class="section__title metrics-dashboard__title">Key Metrics</h2>
+        <p class="section__subtitle metrics-dashboard__subtitle">Aggregate impact across all three Amazon teams</p>
+        <div class="metrics-dashboard__grid">
+          <div class="metrics-dashboard__item animate-on-scroll">
+            <div class="metrics-dashboard__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <span class="metrics-dashboard__value" data-target="35" data-prefix="GBP " data-suffix="K">0</span>
+            <span class="metrics-dashboard__label">Weekly Savings</span>
+          </div>
+          <div class="metrics-dashboard__item animate-on-scroll">
+            <div class="metrics-dashboard__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <span class="metrics-dashboard__value" data-target="90" data-suffix="%">0</span>
+            <span class="metrics-dashboard__label">Effort Reduction</span>
+          </div>
+          <div class="metrics-dashboard__item animate-on-scroll">
+            <div class="metrics-dashboard__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <span class="metrics-dashboard__value" data-target="50000" data-suffix="+">0</span>
+            <span class="metrics-dashboard__label">SKUs Managed</span>
+          </div>
+          <div class="metrics-dashboard__item animate-on-scroll">
+            <div class="metrics-dashboard__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <span class="metrics-dashboard__value" data-target="30" data-suffix="K+">0</span>
+            <span class="metrics-dashboard__label">ARN Verifications</span>
+          </div>
+          <div class="metrics-dashboard__item animate-on-scroll">
+            <div class="metrics-dashboard__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span class="metrics-dashboard__value" data-target="100" data-suffix="%">0</span>
+            <span class="metrics-dashboard__label">Data Accuracy</span>
+          </div>
+          <div class="metrics-dashboard__item animate-on-scroll">
+            <div class="metrics-dashboard__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <span class="metrics-dashboard__value" data-target="25" data-suffix="%">0</span>
+            <span class="metrics-dashboard__label">Faster Resolution</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task 12.1: Skills & Tools Section -->
+    <section id="skills" class="skills">
+      <div class="skills__bg" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="section__title">Skills &amp; Tools</h2>
+        <p class="section__subtitle">A blend of business acumen, technical expertise, and soft skills honed across four Amazon teams</p>
+
+        <!-- Category Tabs / Hex Grid -->
+        <div class="skills__grid skills__grid--ba">
+
+          <!-- Business & Operations -->
+          <div class="skills__category animate-on-scroll skill-theme--orange">
+            <div class="skills__category-header">
+              <div class="skills__category-icon-wrap">
+                <svg class="skills__category-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div>
+                <h3 class="skills__category-title">Business &amp; Operations</h3>
+                <p class="skills__category-sub">Strategy meets execution</p>
+              </div>
+            </div>
+            <div class="skills__chips">
+              <span class="skill-chip">External Audits</span>
+              <span class="skill-chip">Operational Risk Management</span>
+              <span class="skill-chip">GST (Goods &amp; Services Tax)</span>
+              <span class="skill-chip">Client Engagement Metrics</span>
+              <span class="skill-chip">Operational Process Improvement</span>
+            </div>
+          </div>
+
+          <!-- Project / Program Management -->
+          <div class="skills__category animate-on-scroll skill-theme--blue">
+            <div class="skills__category-header">
+              <div class="skills__category-icon-wrap">
+                <svg class="skills__category-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"/><rect x="9" y="2" width="6" height="10" rx="2"/></svg>
+              </div>
+              <div>
+                <h3 class="skills__category-title">Project / Program Management</h3>
+                <p class="skills__category-sub">Delivering at scale</p>
+              </div>
+            </div>
+            <div class="skills__chips">
+              <span class="skill-chip">Stakeholder Communication &amp; Management</span>
+              <span class="skill-chip">Strategic Planning</span>
+              <span class="skill-chip">Risk Assessment &amp; Mitigation</span>
+              <span class="skill-chip">Project Planning &amp; Scheduling</span>
+              <span class="skill-chip">Cross-Functional Team Collaboration</span>
+              <span class="skill-chip">Issue Resolution Time Optimization</span>
+            </div>
+          </div>
+
+          <!-- Investigation -->
+          <div class="skills__category animate-on-scroll skill-theme--dark">
+            <div class="skills__category-header">
+              <div class="skills__category-icon-wrap">
+                <svg class="skills__category-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              </div>
+              <div>
+                <h3 class="skills__category-title">Investigation</h3>
+                <p class="skills__category-sub">Dive deep, find root causes</p>
+              </div>
+            </div>
+            <div class="skills__chips">
+              <span class="skill-chip">Due Diligence</span>
+              <span class="skill-chip">Root Cause Analysis (RCA)</span>
+              <span class="skill-chip">Fraud Detection &amp; Prevention</span>
+              <span class="skill-chip">Compliance &amp; Regulatory Investigations</span>
+            </div>
+          </div>
+
+          <!-- Technical -->
+          <div class="skills__category animate-on-scroll skill-theme--cyan">
+            <div class="skills__category-header">
+              <div class="skills__category-icon-wrap">
+                <svg class="skills__category-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <h3 class="skills__category-title">Technical</h3>
+                <p class="skills__category-sub">Code, data, automation</p>
+              </div>
+            </div>
+            <div class="skills__tech-grid">
+              <div class="tech-item"><span class="tech-item__emoji">🗃️</span><span class="tech-item__name">SQL</span></div>
+              <div class="tech-item"><span class="tech-item__emoji">📑</span><span class="tech-item__name">MS Excel</span></div>
+              <div class="tech-item"><span class="tech-item__emoji">🐍</span><span class="tech-item__name">Python</span></div>
+              <div class="tech-item"><span class="tech-item__emoji">📊</span><span class="tech-item__name">VBA</span></div>
+              <div class="tech-item"><span class="tech-item__emoji">🤖</span><span class="tech-item__name">Selenium</span></div>
+              <div class="tech-item"><span class="tech-item__emoji">📈</span><span class="tech-item__name">Data Visualization</span></div>
+              <div class="tech-item"><span class="tech-item__emoji">🔬</span><span class="tech-item__name">Data &amp; Insights</span></div>
+            </div>
+          </div>
+
+          <!-- Soft Skills — wide -->
+          <div class="skills__category animate-on-scroll skills__category--wide skill-theme--purple">
+            <div class="skills__category-header">
+              <div class="skills__category-icon-wrap">
+                <svg class="skills__category-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h3 class="skills__category-title">Soft Skills</h3>
+                <p class="skills__category-sub">The human side of impact</p>
+              </div>
+            </div>
+            <div class="skills__soft-grid">
+              <div class="soft-skill">
+                <span class="soft-skill__icon">💬</span>
+                <span class="soft-skill__name">Effective Communication</span>
+              </div>
+              <div class="soft-skill">
+                <span class="soft-skill__icon">🤝</span>
+                <span class="soft-skill__name">Collaborative Problem-Solving</span>
+              </div>
+              <div class="soft-skill">
+                <span class="soft-skill__icon">🧭</span>
+                <span class="soft-skill__name">Adaptability in Ambiguity</span>
+              </div>
+              <div class="soft-skill">
+                <span class="soft-skill__icon">🚀</span>
+                <span class="soft-skill__name">Proactive Initiative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Task 13.1: Contact / Footer Section -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="container">
+      <h2 class="footer__title">Get in Touch</h2>
+      <div class="footer__links">
+        <a href="mailto:adarshkumar2002.dm@gmail.com" class="footer__link" rel="noopener noreferrer" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          Email
+        </a>
+        <a href="https://www.linkedin.com/in/adarsh-kumar-6213b0206/" class="footer__link" rel="noopener noreferrer" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/AdarshDNR" class="footer__link" rel="noopener noreferrer" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+      <p class="footer__copyright">&copy; 2025 Adarsh Kumar. All rights reserved.</p>
+      <button class="footer__back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="18 15 12 9 6 15"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+</body>
+</html>
